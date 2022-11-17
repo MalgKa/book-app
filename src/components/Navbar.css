@@ -1,0 +1,36 @@
+.navbar {
+    background-color: grey;
+    padding: 20px;
+    color: bisque;
+}
+
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.navbar a.brand {
+    margin-right: auto;
+    color: cornsilk;
+    text-decoration: none;
+}
+
+.navbar a:last-child {
+    margin-left: 40px;
+    text-decoration: none;
+    color: cornsilk;
+    padding: 8px;
+    border: 1px solid cornsilk;
+    border-radius: 4px;
+    transition: all 0.8s;
+
+}
+
+.navbar a:last-child:hover {
+    color: black;
+    background-color: rgb(187, 219, 187);
+    border: 1px solid rgb(187, 219, 187);
+}
