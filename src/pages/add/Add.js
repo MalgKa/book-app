@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { useFetch } from '../../hooks/useFetch'
 
 
@@ -15,6 +16,7 @@ function Add() {
     const [image, setImage] = useState('')
     const [desc, setDesc] = useState('')
     const [rating, setRating] = useState('')
+    const history = useHistory()
 
 
     const { postData, data } = useFetch('http://localhost:3004/books', 'POST')
@@ -23,8 +25,14 @@ function Add() {
     const handleAdd = (e) => {
         e.preventDefault()
         postData({ title, author, image, desc, rating })
-
     }
+
+    useEffect(() => {
+        if (data) {
+            history.push('/')
+        }
+
+    }, [data])
 
     return (
         <div className='add'>
