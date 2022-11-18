@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useFetch } from '../../hooks/useFetch'
 
 
 
@@ -11,13 +12,17 @@ import './Add.css'
 function Add() {
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState('')
-    const [img, setImg] = useState('')
+    const [image, setImage] = useState('')
     const [desc, setDesc] = useState('')
     const [rating, setRating] = useState('')
 
+
+    const { postData, data } = useFetch('http://localhost:3004/books', 'POST')
+
+
     const handleAdd = (e) => {
         e.preventDefault()
-
+        postData({ title, author, image, desc, rating })
 
     }
 
@@ -47,8 +52,8 @@ function Add() {
                 <label>
                     <span>Img url:</span>
                     <input type="text"
-                        onChange={(e) => setImg(e.target.value)}
-                        value={img}
+                        onChange={(e) => setImage(e.target.value)}
+                        value={image}
                         required
                     />
                 </label>
