@@ -1,0 +1,28 @@
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 60px auto;
+
+}
+
+.book-list .card {
+    background-color: rgb(221, 220, 220);
+    box-shadow: -12px -19px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgb(201, 198, 198);
+    border-radius: 8px;
+    padding: 5px;
+    transition: transform 0.3s ease
+}
+
+.book-list .card:hover {
+    /* transform: rotate(3deg) */
+    transform: scale(1.1);
+
+}
+
+.book-list .card a {
+    text-decoration: none;
+    color: rgb(235, 128, 7);
+}

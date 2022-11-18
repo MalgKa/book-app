@@ -1,0 +1,36 @@
+.add {
+    background-color: rgb(238, 238, 238);
+    color: #555;
+    max-width: 480px;
+    margin: 60px auto;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.add label span {
+    display: block;
+    margin: 30px 0 10px;
+}
+
+.add p {
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.add button {
+    display: block;
+    width: 100px;
+    font-size: 1em;
+    color: #fff8DC;
+    padding: 8px 20px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #e7880c;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+input,
+textarea {
+    width: 300px;
+}
